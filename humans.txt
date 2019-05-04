@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Wiktor Eriksson -- Lead Developer -- Sweden -- wiktoreriksson.se
+
+# THANKS
+
+    Henrik Eriksson -- Sweden -- Twitter @javakonsult
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
