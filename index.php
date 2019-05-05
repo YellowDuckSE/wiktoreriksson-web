@@ -48,12 +48,14 @@ echo $age;
     <h4>Java FTW!</h4>
 </header>
 <div class="dpart first">
-    <h2>Wiktor Eriksson - About Me</h2>
-    <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently working on several Java projects.</p>
+    <h2>Wiktor Eriksson - About Me And This Web Server</h2>
+    <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently working on several Java, IoT, and open source projects.</p>
 
     <p>This website is running HTML5, JS (ECMA 5) and CSS3 on the front-end. The back-end is run by PHP 7.1 and MariaDB.</p>
 
     <p>This web server is run on a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a> using <a href="https://httpd.apache.org/">Apache 2</a> as main process to handle user connections from users. I've also included Google Analytics to track users on this website.</p>
+
+    <p>I had an old, now abandoned, web page in Swedish, visit it <a href="//wiktoreriksson.se/old_web/index.php">here.</a></p>
 </div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -66,7 +68,9 @@ echo $age;
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<div class="dpart second"></div>
+<div class="dpart second">
+
+</div>
 </body>
 
 </html>
