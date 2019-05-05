@@ -114,7 +114,7 @@ textarea {
    ========================================================================== */
 
 header, .header, footer, .footer {
-    background: rgba(0, 255, 255, 0.9);
+    background: rgba(0, 255, 255, 0.8);
     padding: 5px 0 0 5px;
     width: 100%;
 }
