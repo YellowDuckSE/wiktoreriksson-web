@@ -77,7 +77,7 @@ echo $age;
 </div>
 <!-- Start of CuterCounter Code -->
 <div class="dpart">
-<a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hits.php?id=gvpaqfk&nd=7&style=26" border="0" alt="hit counter"></a>
+<a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hits.php?id=gvpaqfk&nd=7&style=26" style="border: 0" alt="hit counter"></a>
 <!-- End of CuterCounter Code -->
 <p>unique visitors have been on this site.</p>
 </div>
