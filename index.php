@@ -83,15 +83,6 @@ echo $age;
         <li><a href="//wiktoreriksson.se/old_web/index.php">My old Swedish website</a></li>
     </ul>
 </div>
-<!-- Start of CuterCounter Code -->
-<div class="dpart first webcount">
-    <!-- hitwebcounter Code START -->
-    <a href="http://www.hitwebcounter.com" target="_blank">
-        <img src="http://hitwebcounter.com/counter/counter.php?page=7068686&style=0038&nbdigits=7&type=ip&initCount=0" title="free hits" Alt="free hits" style="border: 0;">
-    </a>
-
-    <p>unique visitors have been on this site.</p>
-</div>
 </body>
 
 </html>
