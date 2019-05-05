@@ -47,6 +47,7 @@ echo $age;
     <h1>Wiktor Eriksson</h1>
     <h4>Java FTW!</h4>
 </header>
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/3oriNXgmyShWPjuaFa" width="100%" height="100%" style="position:absolute;border: 0;" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/vintage-halloween-creepy-3oriNXgmyShWPjuaFa">via GIPHY</a></p>
 <div class="dpart first">
     <h2>Wiktor Eriksson - About Me And This Web Server</h2>
     <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently working on several Java, IoT, and open source projects.</p>
