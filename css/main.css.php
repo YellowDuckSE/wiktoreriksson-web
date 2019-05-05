@@ -162,14 +162,6 @@ div.dpart.second {
 div.dpart.third {
     background: rgba(<?= implode(",", $rgbColor); ?>, 0.75);
 }
-<?php
-    //Create a loop.
-    foreach(array('r', 'g', 'b') as $color){
-       //Generate a random number between 0 and 255.
-        $rgbColor[$color] = mt_rand(100, 255);
-    }
-    var_dump($rgbColor);
-?>
 body {
     background: rgb(255, 200, 200) url("/img/javaBG.jpg");
 }

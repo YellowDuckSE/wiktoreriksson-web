@@ -75,6 +75,14 @@ echo $age;
 
     <p>I usually have a coding project that I work on.</p>
 </div>
+
+<div class="dpart third">
+    <h2>Links</h2>
+
+    <ul>
+        <li><a href="//wiktoreriksson.se/old_web/index.php">My old Swedish website</a></li>
+    </ul>
+</div>
 <!-- Start of CuterCounter Code -->
 <div class="dpart first webcount">
     <!-- hitwebcounter Code START -->
