@@ -49,7 +49,7 @@ echo $age;
 </header>
 <div class="dpart first">
     <h2>Wiktor Eriksson - About Me</h2>
-    <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently in the branch of coding Java projects.</p>
+    <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently working on several Java projects.</p>
 
     <p>This website is running HTML5, JS (ECMA 5) and CSS3 on the front-end. The back-end is run by PHP 7.1 and MariaDB.</p>
 
