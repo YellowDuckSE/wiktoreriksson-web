@@ -51,7 +51,7 @@ echo $age;
     <h2>Wiktor Eriksson - About Me And This Web Server</h2>
     <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently working on several Java, IoT, and open source projects.</p>
 
-    <p>This website is running HTML5, JS (ECMA 5) and CSS3 on the front-end. The back-end is run by PHP 7.1 and MariaDB.</p>
+    <p>This website is running HTML5, JS (ECMA 5) and CSS3 on the front-end. The back-end is run by PHP 7.1 and MariaDB (MySQL).</p>
 
     <p>This web server is run on a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a> using <a href="https://httpd.apache.org/">Apache 2</a> as main process to handle user connections from users. I've also included Google Analytics to track users on this website.</p>
 
@@ -69,7 +69,17 @@ echo $age;
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <div class="dpart second">
+    <h2>What I Do</h2>
 
+    <p>I like to experiment with electronics. I have built an alarm clock with an Arduino!</p>
+
+    <p>I usually have a coding project that I work on.</p>
+</div>
+<!-- Start of CuterCounter Code -->
+<div class="dpart">
+<a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hits.php?id=gvpaqfk&nd=7&style=26" border="0" alt="hit counter"></a>
+<!-- End of CuterCounter Code -->
+<p>unique visitors have been on this site.</p>
 </div>
 </body>
 
