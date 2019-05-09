@@ -112,7 +112,10 @@ textarea {
  /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+body {
+    /* For fixing mobile Safari viewport */
+    min-width: 1680px;
+}
 header, .header, footer, .footer {
     background: rgba(0, 255, 255, 0.8);
     padding: 5px 0 0 5px;
