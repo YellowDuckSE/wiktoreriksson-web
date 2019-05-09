@@ -45,7 +45,7 @@ echo $age;
 <!-- Add your site or application content here -->
 <header>
     <h1>Wiktor Eriksson</h1>
-    <h4>Java FTW!</h4>
+    <h3>Java FTW!</h3>
 </header>
 <div class="dpart first">
     <h2>Wiktor Eriksson - About Me And This Web Server</h2>
@@ -81,6 +81,7 @@ echo $age;
 
     <ul>
         <li><a href="//wiktoreriksson.se/old_web/index.php">My old Swedish website</a></li>
+        <li><a href="LAMP.php">Set up your own website on a Raspberry Pi!</a></li>
     </ul>
 </div>
 </body>
