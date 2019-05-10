@@ -13,13 +13,14 @@ echo $age;
     <meta charset="utf-8">
     <title>Wiktor Eriksson Web</title>
     <meta name="description" content="Hello! I'm Wiktor and I am <?php echoAge() ?> years old. Check out my website!">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css.php">
+
 
     <meta name="theme-color" content="#fafafa">
     <!-- Global site tag (gtag.js) - Google Analytics -->
