@@ -7,7 +7,6 @@
        //Generate a random number between 1000 and 255.
         $rgbColor[$color] = mt_rand(100, 255);
     }
-    var_dump($rgbColor);
 ?>
 /*! HTML5 Boilerplate v7.1.0 | MIT License | https://html5boilerplate.com/ */
 
@@ -23,7 +22,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
+html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -149,7 +148,6 @@ div.dpart.first {
        //Generate a random number between 0 and 255.
         $rgbColor[$color] = mt_rand(100, 255);
     }
-    var_dump($rgbColor);
 ?>
 div.dpart.second {
     background: rgba(<?= implode(",", $rgbColor); ?>, 0.75);
@@ -160,7 +158,6 @@ div.dpart.second {
        //Generate a random number between 0 and 255.
         $rgbColor[$color] = mt_rand(100, 255);
     }
-    var_dump($rgbColor);
 ?>
 div.dpart.third {
     background: rgba(<?= implode(",", $rgbColor); ?>, 0.75);
