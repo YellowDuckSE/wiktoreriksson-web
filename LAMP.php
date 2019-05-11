@@ -22,6 +22,7 @@
 
         gtag('config', 'UA-138568396-1');
     </script>
+    <script></script>
     <style>
     </style>
 </head>
@@ -34,7 +35,7 @@
 <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-
+<noscript class="browserupgrade">Please enable JavaScript in your browser.</noscript>
 <!-- Add your site or application content here -->
 <header>
     <h1>Wiktor Eriksson</h1>
