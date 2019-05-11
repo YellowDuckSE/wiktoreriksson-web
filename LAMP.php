@@ -1,4 +1,4 @@
-<?php /** @noinspection SqlResolve */
+<?php /** @noinspection ALL */
 $conn = new mysqli("localhost","root","MYSQL_ROOT_PASSWD","webdb") or die("Failed to connect to MariaDB");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
