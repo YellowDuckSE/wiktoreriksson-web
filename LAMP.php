@@ -1,3 +1,15 @@
+<?php /** @noinspection SqlResolve */
+$conn = new mysqli("localhost","root","MYSQL_ROOT_PASSWD","webdb") or die("Failed to connect to MariaDB");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$stmt = $conn->prepare("INSERT INTO CommentsLAMP (poster, text) VALUES (?, ?)");
+
+if (isset($_POST["commentsubmit"])) {
+    $stmt->bind_param("ss", $_POST["name"], $_POST["text"]);
+    $stmt->execute();
+}
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -10,7 +22,7 @@
     <link rel="apple-touch-icon" href="icon.png">
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css.php">
+    <link rel="stylesheet" href="css/main.css">
 
     <meta name="theme-color" content="#fafafa">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +34,6 @@
 
         gtag('config', 'UA-138568396-1');
     </script>
-    <script></script>
     <style>
     </style>
 </head>
@@ -35,7 +46,6 @@
 <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-<noscript class="browserupgrade">Please enable JavaScript in your browser.</noscript>
 <!-- Add your site or application content here -->
 <header>
     <h1>Wiktor Eriksson</h1>
@@ -100,9 +110,50 @@
     <div class="dpart first">
         <h2>4. Port Forwarding</h2>
         <p>Follow <a href="//portforward.com/router.htm">this guide</a> to port forward. You will forward port <code>80</code>. Get your routers public IP address (for example mine is 78.108.50.45, DNS wiktoreriksson.se).</p>
-        <p>Let's say that your router's public IP address is 123.123.1.23. Go to <code>http://123.123.1.23/</code> in your browser. This will, hopefully, return your webpage! Now you can get a domain and register the IP to it!</p>
+        <p>Go to <code>http://YOUR_IP_ADDR/</code> in your browser. This will, hopefully, return your webpage! Now you can get a domain and register the IP to it!</p>
     </div>
     <p>Good luck with designing your webpage!</p>
+</div>
+<div class="comments-section second">
+    <h2>Comments</h2>
+    <form action="/LAMP.php" method="post" id="comment_form">
+        <p>Leave a comment</p>
+        <label for="name">Your name</label><input type="text" id="name" name="name" title="Name">
+        <br><label for="text">Comment</label><textarea id="text" name="text" title="Text"></textarea>
+        <input type="submit" name="commentsubmit" value="Submit comment">
+    </form>
+    <div class="comments-wrapper">
+        <h4>Posted Comments</h4>
+        <?php
+        $sql = "SELECT * FROM CommentsLAMP";
+        $result = $conn->query($sql);
+        echo "<p class='comments_count'>".$result->num_rows." comments</p>";
+        echo "<hr>";
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $ts = $_COOKIE["ts"];
+                if (strpos($ts,'-') === false) {
+                    $ts = "+".$ts;
+                }
+                if (strlen($ts) < 3) {
+                    $ts = substr($ts,0,1)."0".substr($ts,1);
+                }
+                if (strlen($ts) < 4) {
+                    $ts = $ts."00";
+                }
+                $date = new DateTime($row["time"].' +00');
+                $date->setTimezone(new DateTimeZone($ts));
+                echo "<div class=\"comment clearfix\">";
+                echo "<div class=\"comment-details\">";
+                echo "<span class=\"comment-name\">".$row["poster"]."</span>";
+                echo "<span class=\"comment-date\">".$date->format('Y-m-d H:i:s e')."</span>";
+                echo "<p>".$row["text"]."</p>";
+                echo "</div></div>";
+            }
+        }
+        ?>
+    </div>
 </div>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
