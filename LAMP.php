@@ -43,6 +43,12 @@ if (isset($_POST["commentsubmit"])) {
 <script src="js/vendor/jquery-3.3.1.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<?php
+$ts = $_COOKIE["ts"];
+if ($ts == 0) {
+    echo "<script>document.location.reload(true);</script>";
+}
+?>
 <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
