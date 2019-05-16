@@ -48,15 +48,6 @@ $ts = $_COOKIE["ts"];
 if (!isset($ts)) {
     echo "<script>document.location.reload(true);</script>";
 }
-if (strpos($ts,'-') === false) {
-    $ts = "+".$ts;
-}
-if (strlen($ts) < 3) {
-    $ts = substr($ts,0,1)."0".substr($ts,1);
-}
-if (strlen($ts) < 4) {
-    $ts = $ts."00";
-}
 ?>
 <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -145,6 +136,16 @@ if (strlen($ts) < 4) {
         echo "<p class='comments_count'>".$result->num_rows." comments</p>";
         echo "<hr>";
         if ($result->num_rows > 0) {
+            $ts = $_COOKIE["ts"];
+            if (strpos($ts,'-') === false) {
+                $ts = "+".$ts;
+            }
+            if (strlen($ts) < 3) {
+                $ts = substr($ts,0,1)."0".substr($ts,1);
+            }
+            if (strlen($ts) < 4) {
+                $ts = $ts."00";
+            }
             // output data of each row
             while($row = $result->fetch_assoc()) {
                 $date = new DateTime($row["time"].' +00');
