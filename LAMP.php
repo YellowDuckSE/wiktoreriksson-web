@@ -45,8 +45,17 @@ if (isset($_POST["commentsubmit"])) {
 <script src="js/main.js"></script>
 <?php
 $ts = $_COOKIE["ts"];
-if ($ts == 0) {
+if (!isset($ts)) {
     echo "<script>document.location.reload(true);</script>";
+}
+if (strpos($ts,'-') === false) {
+    $ts = "+".$ts;
+}
+if (strlen($ts) < 3) {
+    $ts = substr($ts,0,1)."0".substr($ts,1);
+}
+if (strlen($ts) < 4) {
+    $ts = $ts."00";
 }
 ?>
 <!--[if IE]>
@@ -138,16 +147,6 @@ if ($ts == 0) {
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                $ts = $_COOKIE["ts"];
-                if (strpos($ts,'-') === false) {
-                    $ts = "+".$ts;
-                }
-                if (strlen($ts) < 3) {
-                    $ts = substr($ts,0,1)."0".substr($ts,1);
-                }
-                if (strlen($ts) < 4) {
-                    $ts = $ts."00";
-                }
                 $date = new DateTime($row["time"].' +00');
                 $date->setTimezone(new DateTimeZone($ts));
                 echo "<div class=\"comment clearfix\">";
