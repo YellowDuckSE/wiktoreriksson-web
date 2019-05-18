@@ -16,10 +16,17 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/404.css">
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Nope</h1>
+        <h3>Huh?</h3>
+    </header>
     <h1>HTTP 403 - Forbidden</h1>
-    <p>Seems like you´re not authenticated.</p>
+    <p>Seems like you´re not authenticated. Please try again later.</p>
+    <p>You will be redirected to the last visited page in <span class="sec">5</span> seconds.</p>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
          style="display:block"
@@ -30,6 +37,21 @@
     </ins>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function bhistory() {
+            var cyclesleft = 5;
+            while (true) {
+                $(".sec").html("<span class=\"sec\">"+cyclesleft+"</span>");
+                if (cyclesleft-- < 1) break;
+                await sleep(1000);
+            }
+            history.back();
+        }
+        $(bhistory());
     </script>
 </body>
 </html>

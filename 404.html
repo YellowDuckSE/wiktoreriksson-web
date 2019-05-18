@@ -1,4 +1,5 @@
 <!doctype html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -16,21 +17,43 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/404.css">
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-    <h1>HTTP 404 - Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist. We are sorry. :(</p>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-gw-3+1f-3d+2z"
-         data-ad-client="ca-pub-9278648729512096"
-         data-ad-slot="5853340872">
-    </ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+<header>
+    <h1>Nope</h1>
+    <h3>Huh?</h3>
+</header>
+<h1>HTTP 404 - Page Not Found</h1>
+<p>Sorry, but the page you were trying to view does not exist. We are sorry. :(</p>
+<p>You will be redirected to the last visited page in <span class="sec">5</span> seconds.</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-gw-3+1f-3d+2z"
+     data-ad-client="ca-pub-9278648729512096"
+     data-ad-slot="5853340872">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    async function bhistory() {
+        var cyclesleft = 5;
+        while (true) {
+            $(".sec").html("<span class=\"sec\">"+cyclesleft+"</span>");
+            if (cyclesleft-- < 1) break;
+            await sleep(1000);
+        }
+        history.back();
+    }
+    $(bhistory());
+</script>
 </body>
 </html>
 <!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
