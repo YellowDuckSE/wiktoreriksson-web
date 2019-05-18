@@ -21,7 +21,13 @@ echo $age;
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9278648729512096",
+            enable_page_level_ads: true
+        });
+    </script>
     <meta name="theme-color" content="#fafafa">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138568396-1"></script>
@@ -58,17 +64,6 @@ echo $age;
 
     <p>I had an old, now abandoned, web page in Swedish, visit it <a href="//wiktoreriksson.se/old_web/index.php">here.</a></p>
 </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-gw-3+1f-3d+2z"
-     data-ad-client="ca-pub-9278648729512096"
-     data-ad-slot="5853340872">
-</ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <div class="dpart second">
     <h2>What I Do</h2>
 

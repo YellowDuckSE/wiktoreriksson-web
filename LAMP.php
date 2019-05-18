@@ -34,8 +34,13 @@ if (isset($_POST["commentsubmit"])) {
 
         gtag('config', 'UA-138568396-1');
     </script>
-    <style>
-    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9278648729512096",
+            enable_page_level_ads: true
+        });
+    </script>
 </head>
 
 <body>
@@ -60,14 +65,6 @@ if (!isset($ts)) {
 
 <div class="dpart third">
     <p>Hello there! Do you wanna set up a web server like me, on a Raspberry Pi? If you want, here is how!</p>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-gw-3+1f-3d+2z"
-         data-ad-client="ca-pub-9278648729512096"
-         data-ad-slot="5853340872">
-    </ins>
     <div class="dpart first">
         <h2>1. Intro</h2>
         <table>
@@ -92,14 +89,6 @@ if (!isset($ts)) {
     <div class="dpart first">
         <h2>3. Install "Raspbian"</h2>
         <p>A menu should show up. In the list, pick <b>Raspbian (recommended)</b> and follow instructions. I´ve been unable to test NOOBS, so my instructions can be a little bit unclear.</p>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-format="fluid"
-             data-ad-layout-key="-gw-3+1f-3d+2z"
-             data-ad-client="ca-pub-9278648729512096"
-             data-ad-slot="5853340872">
-        </ins>
         <p>When Raspbian boots, open Terminal and type:</p>
         <blockquote><code>sudo raspi-config</code></blockquote>
         <p>and press Enter. Select SSH and pick Enable/Yes. Exit from the menu.</p>
