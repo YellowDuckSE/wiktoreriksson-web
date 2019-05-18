@@ -16,4 +16,3 @@ function getCookie(cname) {
     }
     return "";
 }
-setCookie("ts",(-(new Date().getTimezoneOffset() / 60)).toString().replace(",","").replace(".",""));
