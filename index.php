@@ -13,7 +13,7 @@ echo $age;
     <meta charset="utf-8">
     <title>Wiktor Eriksson Web</title>
     <meta name="description" content="Hello! I'm Wiktor and I am <?php echoAge() ?> years old. Check out my website!">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
