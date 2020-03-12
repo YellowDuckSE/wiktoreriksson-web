@@ -108,7 +108,8 @@
     <div class="comments-wrapper">
         <h4>Posted Comments</h4>
         <?php
-        $sql = "SELECT * FROM comments.test";
+        $conn = new mysqli("localhost","root","rootpass","comments");
+        $sql = "SELECT * FROM test";
         $result = $conn->query($sql);
         echo "<p class='comments_count'>".$result->num_rows." comments</p>";
         echo "<hr>";
@@ -135,6 +136,7 @@
                 echo "</div></div>";
             }
         }
+        $conn->close();
         ?>
     </div>
 </div>
