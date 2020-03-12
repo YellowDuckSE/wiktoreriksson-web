@@ -102,8 +102,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-    /* For fixing mobile Safari viewport */
-    min-width: 1680px;
 }
 header, .header, footer, .footer {
     background: rgba(0, 255, 255, 0.8);
@@ -150,6 +148,7 @@ div.dpart {
 
 div.dpart p {
     color: #000000;
+    text-align: center;
 }
 div.first {
     background: rgba(253, 255, 175, 0.75);
