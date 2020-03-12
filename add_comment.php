@@ -4,4 +4,4 @@
     $conn->query($sql);
     $conn->close();
 ?>
-<!--<script>window.location.href="<?php echo $_POST["source"] ?>"</script-->
+<script>window.location.href="<?php echo $_POST["source"] ?>"</script>
