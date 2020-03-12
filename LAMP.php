@@ -93,6 +93,52 @@
     </div>
     <p>Good luck with designing your webpage!</p>
 </div>
+<div class="comments-section second">
+    <h2>Comments</h2>
+    <form action="chatbotdestinaton.php" id="comment-form" method="post">
+        <label>
+            Comment:
+            <input type="text" name="text">
+        </label>
+        <input type="hidden" name="source" value="/LAMP.php">
+        <input type="hidden" name="table" value="test">
+        <input type="button" onclick="chatbotPrevention();" value="Comment!">
+    </form>
+
+    <div class="comments-wrapper">
+        <h4>Posted Comments</h4>
+        <?php
+        $sql = "SELECT * FROM comments.test";
+        $result = $conn->query($sql);
+        echo "<p class='comments_count'>".$result->num_rows." comments</p>";
+        echo "<hr>";
+        if ($result->num_rows > 0) {
+            $ts = $_COOKIE["ts"];
+            if (strpos($ts,'-') === false) {
+                $ts = "+".$ts;
+            }
+            if (strlen($ts) < 3) {
+                $ts = substr($ts,0,1)."0".substr($ts,1);
+            }
+            if (strlen($ts) < 4) {
+                $ts = $ts."00";
+            }
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $date = new DateTime($row["time"].' +00');
+                $date->setTimezone(new DateTimeZone($ts));
+                echo "<div class=\"comment clearfix\">";
+                echo "<div class=\"comment-details\">";
+                echo "<span class=\"comment-name\">".$row["poster"]."</span>";
+                echo "<span class=\"comment-date\">".$date->format('Y-m-d H:i:s e')."</span>";
+                echo "<p>".$row["text"]."</p>";
+                echo "</div></div>";
+            }
+        }
+        ?>
+    </div>
+</div>
+
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
