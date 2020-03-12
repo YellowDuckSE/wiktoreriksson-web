@@ -98,17 +98,18 @@
     <form action="chatbotdestinaton.php" id="comment-form" method="post">
         <label>
             Comment:
-            <input type="text" name="text">
+            <input type="text" name="text" id="textfield">
         </label>
         <input type="hidden" name="source" value="/LAMP.php">
         <input type="hidden" name="table" value="test">
-        <input type="button" onclick="chatbotPrevention();" value="Comment!">
+        <input type="button" onclick="document.getElementById('comment-form').action = '/add_comment.php';document.getElementById('comment-form').submit();" value="Comment!">
     </form>
 
     <div class="comments-wrapper">
         <h4>Posted Comments</h4>
         <?php
-        $sql = "SELECT * FROM comments.test";
+        $conn = new mysqli("localhost","root","rootpass","comments");
+        $sql = "SELECT * FROM test";
         $result = $conn->query($sql);
         echo "<p class='comments_count'>".$result->num_rows." comments</p>";
         echo "<hr>";
@@ -135,6 +136,7 @@
                 echo "</div></div>";
             }
         }
+        $conn->close();
         ?>
     </div>
 </div>
