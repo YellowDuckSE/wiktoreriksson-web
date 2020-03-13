@@ -1,3 +1,7 @@
+<?php
+session_start();
+$timezone = $_SESSION['time'];
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -13,6 +17,8 @@
     <link rel="stylesheet" href="css/main.css">
 
     <meta name="theme-color" content="#fafafa">
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138568396-1"></script>
     <script>
@@ -23,9 +29,26 @@
         gtag('config', 'UA-138568396-1');
     </script>
     <script data-ad-client="ca-pub-9278648729512096" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if("<?php echo $timezone; ?>".length===0){
+                var visitortime = new Date();
+                var visitortimezone = ("" + -visitortime.getTimezoneOffset()/60).replace(".","");
+                $.ajax({
+                    type: "GET",
+                    url: "http://wiktoreriksson.se/timezone.php",
+                    data: 'time='+ visitortimezone,
+                    success: function(){
+                        location.reload();
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
+<?php echo $timezone; ?>
 <script src="js/vendor/modernizr-3.7.1.min.js"></script>
 <script src="js/vendor/jquery-3.3.1.min.js"></script>
 <script src="js/plugins.js"></script>
@@ -108,7 +131,7 @@
         echo "<p class='comments_count'>".$result->num_rows." comments</p>";
         echo "<hr>";
         if ($result->num_rows > 0) {
-            $ts = $_COOKIE["ts"];
+            $ts = $_SESSION["time"];
             if (strpos($ts,'-') === false) {
                 $ts = "+".$ts;
             }
