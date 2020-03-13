@@ -54,7 +54,7 @@
             <thead><tr><th>Item</th><th>Purpose</th><th>Image</th></tr></thead>
             <tr><td>Raspberry Pi</td><td>Serves as the server itself</td><td><img src="img/rpi.jpg" alt="Raspberry Pi 3 Picture"></td></tr>
             <tr><td>SD or microSD (depending on which Raspberry Pi you have)</td><td>The storage solution</td><td><img src="img/sd.jpg" alt=""></td></tr>
-            <tr><td>Micro USB (or USB-C for RPi 4) charger</td><td>Serves as the power source</td><td><img src="img/charger.jpg" alt="Basic Charger" style="height: 250px;width: 250px>"></td></tr>
+            <tr><td>Micro USB (or USB-C for RPi 4) charger</td><td>Serves as the power source</td><td><img src="img/charger.jpg" alt="Basic Charger"></td></tr>
             <tr><td>HDMI or micro-HDMI (or Composite if the Raspberry Pi supports it) cable + screen</td><td>Display video</td><td><img src="img/hdmiscreen.jpg" alt="Monitor"><img src="img/hdmi.jpg" alt="HDMI Cable"></td></tr>
             <tr><td>Network Cable</td><td>Networking. You can use the Wi-Fi of the Raspberry Pi 3 and 4 instead.</td><td><img src="img/ethernet.jpg" alt="Ethernet Cable"</td></tr>
             <tfoot><tr><td><b>Item</b></td><td><b>Purpose</b></td><td><b>Image</b></td></tr></tfoot>
