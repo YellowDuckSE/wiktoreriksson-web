@@ -21,13 +21,7 @@ echo $age;
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-9278648729512096",
-            enable_page_level_ads: true
-        });
-    </script>
+    <script data-ad-client="ca-pub-9278648729512096" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="theme-color" content="#fafafa">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138568396-1"></script>
