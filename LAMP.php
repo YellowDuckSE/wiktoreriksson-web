@@ -1,7 +1,3 @@
-<?php
-session_start();
-$timezone = $_SESSION['time'];
-?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -118,7 +114,7 @@ $timezone = $_SESSION['time'];
             <input type="text" name="text" id="textfield">
         </label>
         <input type="hidden" name="source" value="/LAMP.php">
-        <input type="hidden" name="table" value="test">
+        <input type="hidden" name="table" value="lamp">
         <input type="button" onclick="document.getElementById('comment-form').action = '/add_comment.php';document.getElementById('comment-form').submit();" value="Comment!">
     </form>
 
@@ -126,29 +122,17 @@ $timezone = $_SESSION['time'];
         <h4>Posted Comments</h4>
         <?php
         $conn = new mysqli("localhost","root","rootpass","comments");
-        $sql = "SELECT * FROM test";
+        $sql = "SELECT * FROM lamp";
         $result = $conn->query($sql);
         echo "<p class='comments_count'>".$result->num_rows." comments</p>";
         echo "<hr>";
         if ($result->num_rows > 0) {
-            $ts = $_SESSION["time"];
-            if (strpos($ts,'-') === false) {
-                $ts = "+".$ts;
-            }
-            if (strlen($ts) < 3) {
-                $ts = substr($ts,0,1)."0".substr($ts,1);
-            }
-            if (strlen($ts) < 4) {
-                $ts = $ts."00";
-            }
+
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                $date = new DateTime($row["time"].' +00');
-                $date->setTimezone(new DateTimeZone($ts));
                 echo "<div class=\"comment clearfix\">";
                 echo "<div class=\"comment-details\">";
                 echo "<span class=\"comment-name\">".$row["poster"]."</span>";
-                echo "<span class=\"comment-date\">".$date->format('Y-m-d H:i:s e')."</span>";
                 echo "<p>".$row["text"]."</p>";
                 echo "</div></div>";
             }
