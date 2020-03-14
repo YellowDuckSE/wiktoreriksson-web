@@ -11,7 +11,7 @@ echo $age;
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Wiktor Eriksson Web</title>
+    <title>Wiktor Eriksson Web - Programming Guides And Tips (Work In Progress) </title>
     <meta name="description" content="Hello! I'm Wiktor and I am <?php echoAge() ?> years old. Check out my website!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
