@@ -11,7 +11,7 @@ echo $age;
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Wiktor Eriksson Web - Programming Guides And Tips (Work In Progress) </title>
+    <title>WE IT</title>
     <meta name="description" content="Hello! I'm Wiktor and I am <?php echoAge() ?> years old. Check out my website!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,36 +43,64 @@ echo $age;
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<header>
-    <h1>Wiktor Eriksson</h1>
-    <h3>Java FTW!</h3>
-</header>
-<div class="dpart first">
-    <h2>Wiktor Eriksson - About Me And This Web Server</h2>
-    <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I'm currently working on several Java, IoT, and open source projects.</p>
+<div class="en-US"  style="display: none">
+    <header>
+        <h1>WE IT</h1>
+        <h3>We do IT!</h3>
+    </header>
+    <div class="dpart first">
+        <h2>Wiktor Eriksson - About me</h2>
+        <p>Hello! I am Wiktor Eriksson and I am <?php echoAge() ?> years old. I like to code and play games.</p>
 
-    <p>This website is running HTML5, JS (ECMA 5) and CSS3 on the front-end. The back-end is run by PHP 7.1 and MariaDB (MySQL).</p>
+    </div>
+    <div class="dpart second">
+        <h2>What we do</h2>
 
-    <p>This web server is run on a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a> using <a href="https://httpd.apache.org/">Apache 2</a> as main process to handle user connections from users. I've also included Google Analytics to track users on this website.</p>
+        <p>We offer two products, Website and Programming Course for Kids.</p>
+        <p>In the Website package, we will create a website for you. A Raspberry Pi server will be included.
+            In the programming course, your kids can learn how to code themselves. It is only offered in Swedish.</p>
+        <p>For more information, see <a href="/products.php">the products page</a>.</p>
 
-    <p>I had an old, now abandoned, web page in Swedish, visit it <a href="//wiktoreriksson.se/old_web/index.php">here.</a></p>
+    </div>
+
+    <div class="dpart third">
+        <h2>Links</h2>
+
+        <ul>
+            <li><a href="/products.php">Products</a></li>
+            <li><a href="/LAMP.php">A guide I created for setting up a web server on a Raspberry Pi microcomputer.</a></li>
+        </ul>
+    </div>
 </div>
-<div class="dpart second">
-    <h2>What I Do</h2>
+<div class="sv-SE" style="display: none">
+    <header>
+        <h1>WE IT</h1>
+        <h3>We do IT!</h3>
+    </header>
+    <div class="dpart first">
+        <h2>Wiktor Eriksson - Om mig</h2>
+        <p>Hej! Jag är Wiktor Eriksson och jag är <?php echoAge() ?> år gammal. Jag gillar att koda och spela dataspel.</p>
 
-    <p>I like to experiment with electronics. I have built an alarm clock with an Arduino!</p>
+    </div>
+    <div class="dpart second">
+        <h2>Vad vi gör</h2>
 
-    <p>I usually have a coding project that I work on.</p>
-</div>
+        <p>Vi på WE IT har två produkter, Webbsida och Programmeringskurs för barn.</p>
+        <p>I webbsidepaketet skapar vi en webbsida för dig. En Raspberry Pi-server ingår.
+            I programmeringskursen kan dina barn lära sig att koda själva!</p>
+        <p>För mer information, se <a href="/products.php">produktsidan</a>.</p>
 
-<div class="dpart third">
-    <h2>Links</h2>
+    </div>
 
-    <ul>
-        <li><a href="//wiktoreriksson.se/old_web/index.php">My old Swedish website</a></li>
-        <li><a href="LAMP.php">Set up your own website on a Raspberry Pi!</a></li>
-    </ul>
+    <div class="dpart third">
+        <h2>Länkar</h2>
+
+        <ul>
+            <li><a href="/products.php">Produkter</a></li>
+            <li><a href="/LAMP.php">En guide för att sätta upp en webbserver på en Raspberry Pi-dator.</a></li>
+
+        </ul>
+    </div>
 </div>
 </body>
 
